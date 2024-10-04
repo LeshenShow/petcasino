@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/petcasino/static/css/main.8eff06a3.css",
+    "main.css": "/petcasino/static/css/main.a119f091.css",
     "main.js": "/petcasino/static/js/main.e174722d.js",
     "static/js/453.078429fe.chunk.js": "/petcasino/static/js/453.078429fe.chunk.js",
     "index.html": "/petcasino/index.html",
-    "main.8eff06a3.css.map": "/petcasino/static/css/main.8eff06a3.css.map",
+    "main.a119f091.css.map": "/petcasino/static/css/main.a119f091.css.map",
     "main.e174722d.js.map": "/petcasino/static/js/main.e174722d.js.map",
     "453.078429fe.chunk.js.map": "/petcasino/static/js/453.078429fe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8eff06a3.css",
+    "static/css/main.a119f091.css",
     "static/js/main.e174722d.js"
   ]
 }
