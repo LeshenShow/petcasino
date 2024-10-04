@@ -9,8 +9,8 @@ type GameNumbersProps = {
 export function GameNumbers(props: GameNumbersProps) {
   const mapGameNumber = (el: number, i: number) => {
     const className = clsx(
-      "gameNumber",
-      el === props.gameNumber.chosen && "chosenGameNumber"
+      "game-number",
+      el === props.gameNumber.chosen && "chosen-game-number"
     );
     return (
       <Button
@@ -23,5 +23,5 @@ export function GameNumbers(props: GameNumbersProps) {
     );
   };
   const gameNumbers = props.gameNumber.numberArray.map(mapGameNumber);
-  return <div>{gameNumbers}</div>;
+  return <div className="numbers-area">Выбери: {gameNumbers}</div>;
 }

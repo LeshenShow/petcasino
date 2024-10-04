@@ -20,8 +20,8 @@ export function ResultTable({ result }: ResultTableProps) {
 
   const tableResults = valueArray.map(mapValueArray);
   return (
-    <div className="resultTable">
-      <table>
+    <div className="result-table">
+      <table className="table">
         <thead>
           <tr>
             <th>Значение</th>

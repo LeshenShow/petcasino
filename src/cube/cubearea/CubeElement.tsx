@@ -10,12 +10,12 @@ type CubeElementProps = {
 
 export function CubeElement(props: CubeElementProps) {
   const className = clsx(
-    "cubeElement",
-    props.className.isWinner && "cubeElement-winner"
+    "cube-element",
+    props.className.isWinner && "cube-element-winner"
   );
   return (
     <div className={className}>
-      {props.className.active && <div className="circleElement-active" />}
+      {props.className.active && <div className="circle-element-active" />}
     </div>
   );
 }

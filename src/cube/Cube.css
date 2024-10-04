@@ -1,51 +1,213 @@
-.gameTitle {
-    background-color: burlywood;
+.cube-body {
+    /* box-sizing: border-box; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    /* height: 100%; */
+    padding: 10px;
+    background-color: rgba(56, 149, 131, 255);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
-.cubeArea {
-    width: 300px;
+
+
+.cube-area {
+    /* width: 300px; */
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
-.cubeElement {
-    background-color: lightgray;
+.cube-element {
+    background-color: rgba(5, 57, 107, 0.4);
     height: 100px;
     width: 100px;
-    color: black;
+    color: hsl(0, 0%, 0%);
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    border: 0.1px dashed rgba(128, 128, 128, 0.308);
 }
 
-.cubeElement-winner {
-    background-color: lightgreen;
+.cube-element:nth-child(1) {
+    border-radius: 50% 0 0 0;
+    border-bottom: none;
+    border-right: none;
 }
 
-.circleElement-active {
+.cube-element:nth-child(3) {
+    border-radius: 0 50% 0 0;
+    border-bottom: none;
+    border-left: none;
+}
+
+.cube-element:nth-child(5) {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.cube-element:nth-child(7) {
+    border-radius: 0 0 0 50%;
+    border-top: none;
+    border-right: none;
+}
+
+.cube-element:nth-child(9) {
+    border-radius: 0 0 50% 0;
+    border-top: none;
+    border-left: none;
+}
+
+.cube-element-winner {
+    background-color: rgba(141, 228, 175, 255);
+}
+
+.circle-element-active {
     height: 80px;
     width: 80px;
     border-radius: 50%;
-    background-color: black;
+    background-color: rgba(5, 57, 107, 255);
 }
 
-s .resultTable {
-    background-color: rebeccapurple;
+.game-title {
+    background-color: rgba(5, 57, 107, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.gameNumber {
-    background-color: lightgrey;
+.game-title-info {
+    height: 30px;
+    display: flex;
+    align-items: center;
 }
 
-.chosenGameNumber {
-    background-color: black;
-    color: white;
+.game-title-value {
+    margin-left: 10px;
+    font-size: 18px;
+    color: rgba(237, 245, 224, 255);
 }
 
+.numbers-area {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
 
-.gameBid {}
+.game-number {
+    background-color: rgba(56, 149, 131, 255);
+    border: 0;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    color: rgba(237, 245, 224, 255);
+    margin-left: 5px;
+}
 
-.chosenGameBid {
-    background-color: black;
-    color: white;
+.chosen-game-number {
+    background-color: rgba(5, 57, 107, 255);
+    color: rgba(141, 228, 175, 255);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+}
+
+.game-bid {
+    height: 45px;
+    width: 45px;
+    margin-left: 5px;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(56, 149, 131, 255);
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(237, 245, 224, 255);
+}
+
+.game-bid+.game-bid {
+    margin-left: 5px;
+}
+
+.chosen-game-bid {
+    background-color: rgba(5, 57, 107, 255);
+    color: rgba(141, 228, 175, 255);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.go-button {
+    height: 60px;
+    margin-top: 10px;
+    font-size: 30px;
+    border: 0;
+    border-radius: 50px;
+    background-color: blueviolet;
+}
+
+.go-button:hover {
+    background-color: rgb(103, 26, 175);
+}
+
+.go-button:active {
+    background-color: violet;
+}
+
+/* .result-table {
+    background-color: rgba(141, 228, 175, 255);
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 0 0 20px 20px;
+} */
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: rgba(141, 228, 175, 0.9);
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 0 0 20px 20px;
+}
+
+.table th {
+    font-weight: bold;
+    padding: 5px;
+    background: rgba(5, 57, 107, 255);
+    color: rgba(237, 245, 224, 255);
+}
+
+.table td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+
+.table tr td:first-child,
+.table tr th:first-child {
+    border-left: none;
+}
+
+.table tr td:last-child,
+.table tr th:last-child {
+    border-right: none;
+}
+
+.table tr td:last-child {
+    border-bottom: none;
+}
+
+.table tr td:nth-child(1) {
+    border-bottom: none;
+}
+
+.table tr td:nth-child(2) {
+    border-bottom: none;
 }

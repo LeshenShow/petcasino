@@ -9,8 +9,8 @@ type GameBidsProps = {
 export function GameBids(props: GameBidsProps) {
   const mapGameBids = (el: string, i: number) => {
     const className = clsx(
-      "gameBid",
-      props.gameBid.bid === el && "chosenGameBid"
+      "game-bid",
+      props.gameBid.bid === el && "chosen-game-bid"
     );
     return (
       <Button
@@ -22,5 +22,5 @@ export function GameBids(props: GameBidsProps) {
     );
   };
   const gameBids = props.gameBid.bidArray.map(mapGameBids);
-  return <div>{gameBids}</div>;
+  return <div className="numbers-area">Ставки: {gameBids}</div>;
 }

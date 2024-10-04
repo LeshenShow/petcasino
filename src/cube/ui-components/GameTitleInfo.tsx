@@ -1,12 +1,12 @@
 type GameTitleInfoProps = {
-  value?: number;
+  value?: number | string;
   title?: string;
 };
 export function GameTitleInfo({ title, value }: GameTitleInfoProps) {
   return (
-    <div>
+    <div className="game-title-info">
       <span>{title}</span>
-      <span>{value}</span>
+      <span className="game-title-value">{value}</span>
     </div>
   );
 }

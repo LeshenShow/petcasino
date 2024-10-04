@@ -28,5 +28,5 @@ export function CubeArea({ wish, choose }: CubeAreaProps) {
   };
   const cubeElements = gameArea.map(mapGameArea);
 
-  return <div className="cubeArea">{cubeElements}</div>;
+  return <div className="cube-area">{cubeElements}</div>;
 }

@@ -40,8 +40,7 @@ export function GameTitle(props: GameTitleProps) {
   };
 
   return (
-    <div className="gameTitle">
-      <span>Загадай число от 1 до 6</span> {/* {hard code -------} */}
+    <div className="game-title">
       <GameNumbers
         gameNumber={gameNumber}
         updateGameNumber={updateGameNumber}
@@ -49,13 +48,13 @@ export function GameTitle(props: GameTitleProps) {
       <GameTitleInfo title={"Попыток: "} value={props.gameInfo.try} />
       <GameTitleInfo title={"Угадано: "} value={props.gameInfo.guess} />
       <GameTitleInfo title={"Очки: "} value={props.gameInfo.score} />
-      <GameTitleInfo title="Ставки" />
       <GameBids gameBid={gameBid} updateGameBid={updateGameBid} />
       <Button
         title={"GO!"}
         onClick={() => {
           updateGameInfoHandler();
         }}
+        className="go-button"
       />
     </div>
   );

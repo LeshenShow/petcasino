@@ -12,7 +12,7 @@ export type GameInfo = {
   try: number;
   guess: number;
   result: number[];
-  score: number;
+  score: number | string;
   loseStreak: number;
 };
 export function PetApp() {
@@ -23,7 +23,7 @@ export function PetApp() {
     try: 0, // result.length
     guess: 0,
     result: [],
-    score: 0,
+    score: 100,
     loseStreak: 0,
   });
 
@@ -48,10 +48,11 @@ export function PetApp() {
       loseStreak: newLoseStreak,
     });
   };
+
   return (
-    <div>
-      <GameTitle gameInfo={gameInfo} updateGameInfo={updateGameInfo} />
+    <div className="cube-body">
       <CubeArea wish={gameInfo.wish} choose={gameInfo.choose} />
+      <GameTitle gameInfo={gameInfo} updateGameInfo={updateGameInfo} />
       <ResultTable result={gameInfo.result} />
     </div>
   );
